@@ -66,6 +66,7 @@ var sendNotification = function (data) {
 var message = {
   app_id: process.env.APP_ID,
   contents: { en: process.env.MESSAGE || "No message specified" },
+  included_segments: ["Subscribed Users"],
   headings: {
     en:
       process.env.TITLE ||
