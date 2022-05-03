@@ -6,18 +6,33 @@ Receive push notification from OneSignal to your devices using Github Actions
 
 To run this action you'll need:
 
-- An API key from Push (https://push.techulus.com/)
+- An API key and an App ID from OneSignal (https://documentation.onesignal.com/docs/accounts-and-keys)
 
 ## Setup
 
 1. Create the workflow and choose any event of your choice.
 2. Copy and paste the following snippet into your .yml file.
 ```
-- name: Send Push Notification
-  uses: techulus/push-github-action@1.0.0
+- name: Send OneSignal Notification
+  uses: cingh-jasdeep/onesignal-github-action@0.0.1
 ```
-3. Add a new secret `API_KEY` (your API key) and an environment variable `MESSAGE` (notification message)
-4. Commit your changes!
+1. Required environment variables
+   ```
+   APP_ID
+   API_KEY
+   ```
+   Optional environment variables
+   ```
+   MESSAGE
+   IS_ANDROID
+   IS_IOS
+   IS_ANY_WEB
+   WEB_URL
+   ```
+   reference for these variables
+   https://documentation.onesignal.com/reference/create-notification
+
+2. Commit your changes!
 
 ## Sample Workflows
 
@@ -34,10 +49,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Send Push Notification
-      uses: techulus/push-github-action@1.0.0
+    - name: Send OneSignal Notification
+      uses: cingh-jasdeep/onesignal-github-action@0.0.1
       env:
         API_KEY: ${{ secrets.API_KEY }}
+        APP_ID: "YOUR_APP_ID_HERE"
         MESSAGE: "There is a new commit!"
 ```
 
@@ -56,10 +72,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Send Push Notification
-      uses: techulus/push-github-action@1.0.0
+    - name: Send OneSignal Notification
+      uses: cingh-jasdeep/onesignal-github-action@0.0.1
       env:
         API_KEY: ${{ secrets.API_KEY }}
+        APP_ID: "YOUR_APP_ID_HERE"
         MESSAGE: "Test notification from GitHub"
 ```
 
@@ -76,14 +93,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Send Push Notification
-      uses: techulus/push-github-action@1.0.0
+    - name: Send OneSignal Notification
+      uses: cingh-jasdeep/onesignal-github-action@0.0.1
       env:
         API_KEY: ${{ secrets.API_KEY }}
         MESSAGE: "Test notification from GitHub 🧪"
         TITLE: Testing
-        LINK: https://github.com/techulus/push-github-action
+        APP_ID: "YOUR_APP_ID_HERE"
+        WEB_URL: https://github.com/techulus/push-github-action
 ```
 
 ## Support
-Feature Request, Bugs and Ideas can be added [here.](https://pushbytechulus.freshdesk.com/support/tickets/new)
+Feel free to add issues in this repo, fork or make changes
+original code from https://github.com/techulus/push-github-action 
