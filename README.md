@@ -1,7 +1,6 @@
-<img width="100" src="https://push.techulus.com/static/media/logo.5b69d510.svg"/>
-
-# Github Action for Push Notification
-Receive push notification to your devices using Github Actions
+WIP
+# Github Action for OneSignal Notification
+Receive push notification from OneSignal to your devices using Github Actions
 
 ## Pre-requisites
 
