@@ -56,8 +56,7 @@ var sendNotification = function (data) {
   });
 
   req.on("error", function (e) {
-    console.log("ERROR:");
-    console.log(e);
+    console.error("ERROR:" + JSON.parse(e));
   });
 
   req.write(JSON.stringify(data));
