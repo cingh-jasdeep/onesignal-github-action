@@ -14,7 +14,7 @@ To run this action you'll need:
 2. Copy and paste the following snippet into your .yml file.
 ```
 - name: Send OneSignal Notification
-  uses: cingh-jasdeep/onesignal-github-action@0.0.1
+  uses: cingh-jasdeep/onesignal-github-action@v0.0.1
 ```
 1. Required environment variables
    ```
@@ -50,7 +50,7 @@ jobs:
 
     steps:
     - name: Send OneSignal Notification
-      uses: cingh-jasdeep/onesignal-github-action@0.0.1
+      uses: cingh-jasdeep/onesignal-github-action@v0.0.1
       env:
         API_KEY: ${{ secrets.API_KEY }}
         APP_ID: "YOUR_APP_ID_HERE"
@@ -73,7 +73,7 @@ jobs:
 
     steps:
     - name: Send OneSignal Notification
-      uses: cingh-jasdeep/onesignal-github-action@0.0.1
+      uses: cingh-jasdeep/onesignal-github-action@v0.0.1
       env:
         API_KEY: ${{ secrets.API_KEY }}
         APP_ID: "YOUR_APP_ID_HERE"
