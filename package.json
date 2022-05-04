@@ -1,0 +1,23 @@
+{
+  "name": "onesignal-github-action",
+  "version": "0.0.4",
+  "description": "Github Action for OneSignal Notification Receive push notification from OneSignal to your devices using Github Actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cingh-jasdeep/onesignal-github-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cingh-jasdeep/onesignal-github-action/issues"
+  },
+  "homepage": "https://github.com/cingh-jasdeep/onesignal-github-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.7.0"
+  }
+}
