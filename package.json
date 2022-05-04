@@ -2,9 +2,10 @@
   "name": "onesignal-github-action",
   "version": "0.0.4",
   "description": "Github Action for OneSignal Notification Receive push notification from OneSignal to your devices using Github Actions",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js --license licenses.txt && rm -rf node_modules/*"
   },
   "repository": {
     "type": "git",
